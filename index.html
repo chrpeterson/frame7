@@ -55,11 +55,21 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   
-   <div class="popup popup-tablet-fullscreen">
+  <script> var popup = app.popup.create({
+  content: '<div class="popup popup-tablet-fullscreen">
     <p id="flex">
     <img class="diagram" src="Moab_122AR.png">
   </p>
-  </div>
+  </div>',
+  on: {
+    opened: function () {
+      console.log('Popup opened')
+    }
+  }
+})
+  </script>
+  
+   
   
   
   <a-scene embedded arjs>
